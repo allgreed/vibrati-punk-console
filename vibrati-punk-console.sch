@@ -26,39 +26,6 @@ F 3 "" H 10600 750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5D7ADD2F
-P 10600 1100
-F 0 "#PWR?" H 10600 850 50  0001 C CNN
-F 1 "GND" H 10605 927 50  0000 C CNN
-F 2 "" H 10600 1100 50  0001 C CNN
-F 3 "" H 10600 1100 50  0001 C CNN
-	1    10600 1100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C8
-U 1 1 5D7D30E9
-P 10300 950
-F 0 "C8" H 10415 996 50  0000 L CNN
-F 1 "100n" H 10415 905 50  0000 L CNN
-F 2 "" H 10338 800 50  0001 C CNN
-F 3 "~" H 10300 950 50  0001 C CNN
-	1    10300 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C7
-U 1 1 5D7D358B
-P 9800 950
-F 0 "C7" H 9915 996 50  0000 L CNN
-F 1 "100n" H 9915 905 50  0000 L CNN
-F 2 "" H 9838 800 50  0001 C CNN
-F 3 "~" H 9800 950 50  0001 C CNN
-	1    9800 950 
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+9V #PWR?
 U 1 1 5D847E11
 P 10400 1650
@@ -367,20 +334,6 @@ F 3 "~" H 850 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10300 750  10300 800 
-Wire Wire Line
-	9800 1100 10300 1100
-Connection ~ 10300 1100
-Wire Wire Line
-	10300 1100 10600 1100
-Wire Wire Line
-	9800 750  9800 800 
-Wire Wire Line
-	9800 750  10300 750 
-Wire Wire Line
-	10600 750  10300 750 
-Connection ~ 10300 750 
-Wire Wire Line
 	10400 1650 10150 1650
 Wire Wire Line
 	10700 1750 10150 1750
@@ -686,4 +639,77 @@ Wire Wire Line
 Connection ~ 4350 2000
 Wire Wire Line
 	4350 2000 4350 2050
+$Comp
+L Switch:SW_DPST SW?
+U 1 1 5D9AE21B
+P 9350 1000
+F 0 "SW?" H 9350 1325 50  0000 C CNN
+F 1 "SW_DPST" H 9350 1234 50  0000 C CNN
+F 2 "" H 9350 1000 50  0001 C CNN
+F 3 "~" H 9350 1000 50  0001 C CNN
+	1    9350 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5D7D358B
+P 9800 1050
+F 0 "C7" H 9915 1096 50  0000 L CNN
+F 1 "100n" H 9915 1005 50  0000 L CNN
+F 2 "" H 9838 900 50  0001 C CNN
+F 3 "~" H 9800 1050 50  0001 C CNN
+	1    9800 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 850  10300 950 
+Connection ~ 10300 1250
+Wire Wire Line
+	9800 1250 10300 1250
+$Comp
+L Device:C C8
+U 1 1 5D7D30E9
+P 10300 1100
+F 0 "C8" H 10415 1146 50  0000 L CNN
+F 1 "100n" H 10415 1055 50  0000 L CNN
+F 2 "" H 10338 950 50  0001 C CNN
+F 3 "~" H 10300 1100 50  0001 C CNN
+	1    10300 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7ADD2F
+P 10600 1250
+F 0 "#PWR?" H 10600 1000 50  0001 C CNN
+F 1 "GND" H 10605 1077 50  0000 C CNN
+F 2 "" H 10600 1250 50  0001 C CNN
+F 3 "" H 10600 1250 50  0001 C CNN
+	1    10600 1250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10300 1250 10600 1250
+Wire Wire Line
+	9800 1200 9800 1250
+Wire Wire Line
+	10600 750  9550 750 
+Wire Wire Line
+	9550 750  9550 900 
+Wire Wire Line
+	9150 900  9150 600 
+Wire Wire Line
+	9150 600  9800 600 
+Wire Wire Line
+	9800 600  9800 850 
+Wire Wire Line
+	9800 850  10300 850 
+Connection ~ 9800 850 
+Wire Wire Line
+	9800 850  9800 900 
+Wire Wire Line
+	9550 1100 9550 1250
+Wire Wire Line
+	9550 1250 9800 1250
+Connection ~ 9800 1250
 $EndSCHEMATC
