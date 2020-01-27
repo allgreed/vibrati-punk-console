@@ -16,17 +16,6 @@ Comment4 ""
 $EndDescr
 $Comp
 L power:+9V #PWR?
-U 1 1 5D7ACB0A
-P 10600 750
-F 0 "#PWR?" H 10600 600 50  0001 C CNN
-F 1 "+9V" H 10615 923 50  0000 C CNN
-F 2 "" H 10600 750 50  0001 C CNN
-F 3 "" H 10600 750 50  0001 C CNN
-	1    10600 750 
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+9V #PWR?
 U 1 1 5D847E11
 P 10400 1650
 F 0 "#PWR?" H 10400 1500 50  0001 C CNN
@@ -640,17 +629,6 @@ Connection ~ 4350 2000
 Wire Wire Line
 	4350 2000 4350 2050
 $Comp
-L Switch:SW_DPST SW?
-U 1 1 5D9AE21B
-P 9350 1000
-F 0 "SW?" H 9350 1325 50  0000 C CNN
-F 1 "SW_DPST" H 9350 1234 50  0000 C CNN
-F 2 "" H 9350 1000 50  0001 C CNN
-F 3 "~" H 9350 1000 50  0001 C CNN
-	1    9350 1000
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C7
 U 1 1 5D7D358B
 P 9800 1050
@@ -693,23 +671,41 @@ Wire Wire Line
 Wire Wire Line
 	9800 1200 9800 1250
 Wire Wire Line
-	10600 750  9550 750 
-Wire Wire Line
-	9550 750  9550 900 
-Wire Wire Line
-	9150 900  9150 600 
-Wire Wire Line
-	9150 600  9800 600 
-Wire Wire Line
 	9800 600  9800 850 
 Wire Wire Line
 	9800 850  10300 850 
 Connection ~ 9800 850 
 Wire Wire Line
 	9800 850  9800 900 
-Wire Wire Line
-	9550 1100 9550 1250
-Wire Wire Line
-	9550 1250 9800 1250
 Connection ~ 9800 1250
+$Comp
+L Switch:SW_DPST SW?
+U 1 1 5D9AE21B
+P 8900 1150
+F 0 "SW?" H 8900 1475 50  0000 C CNN
+F 1 "SW_DPST" H 8900 1384 50  0000 C CNN
+F 2 "" H 8900 1150 50  0001 C CNN
+F 3 "~" H 8900 1150 50  0001 C CNN
+	1    8900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 600  9800 600 
+$Comp
+L power:+9V #PWR?
+U 1 1 5D7ACB0A
+P 9350 1050
+F 0 "#PWR?" H 9350 900 50  0001 C CNN
+F 1 "+9V" H 9365 1223 50  0000 C CNN
+F 2 "" H 9350 1050 50  0001 C CNN
+F 3 "" H 9350 1050 50  0001 C CNN
+	1    9350 1050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8700 600  8700 1050
+Wire Wire Line
+	9100 1250 9800 1250
+Wire Wire Line
+	9350 1050 9100 1050
 $EndSCHEMATC
